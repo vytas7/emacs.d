@@ -1,0 +1,14 @@
+/.cask
+/.emacs.desktop
+/.session
+/auto-save-list
+/autosave
+/backup
+/elpa
+/elpa-*
+/games
+/network-security.data
+/session.*
+/site-lisp
+/snippets
+/url/cache
