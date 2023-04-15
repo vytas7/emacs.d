@@ -65,6 +65,18 @@
 (line-number-mode 1)
 (column-number-mode 1)
 
+;; Enable line and column numbering
+(global-linum-mode 1)
+(line-number-mode 1)
+(column-number-mode 1)
+
+;; Set the number to the number of columns to use and enable it by default
+(setq-default fill-column 79)
+(add-hook 'text-mode-hook 'turn-on-auto-fill)
+(add-hook 'python-mode-hook 'turn-on-auto-fill)
+(add-hook 'python-mode-hook '(lambda()
+    (setq adaptive-fill-mode ())))
+
 ;; Use a theme on graphical displays
 (when (display-graphic-p)
   (load-theme 'gruvbox t))
