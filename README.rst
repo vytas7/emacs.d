@@ -30,3 +30,10 @@ installed::
   git clone https://github.com/jwiegley/use-package.git ~/.emacs.d/site-lisp/use-package
   cd ~/.emacs.d/site-lisp/use-package
   make
+
+The ``make`` step requires ``mkinfo``
+(found in the ``texinfo`` package on some systems).
+
+Alternatively, the installation of ``use-package`` as well as setup of
+`elpy <https://github.com/jorgenschaefer/elpy>`_ is automated in
+``setup-emacs.sh``. Use with caution!
