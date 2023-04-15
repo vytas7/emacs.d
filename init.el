@@ -30,7 +30,11 @@
   :ensure t
   :init
   (company-quickhelp-mode 1))
-(use-package find-file-in-project :ensure t)
+(use-package helm :ensure t)
+(use-package find-file-in-project
+  :ensure t
+  :init
+  (helm-mode 1))
 ;; Development tools
 (use-package flycheck :ensure t)
 (use-package magit :ensure t)
