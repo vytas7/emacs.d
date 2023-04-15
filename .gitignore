@@ -4,6 +4,7 @@
 /auto-save-list
 /autosave
 /backup
+/custom.el
 /elpa
 /elpa-*
 /games
@@ -11,4 +12,5 @@
 /session.*
 /site-lisp
 /snippets
+/transient
 /url/cache
