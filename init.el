@@ -46,6 +46,7 @@
 (use-package nginx-mode :ensure t)
 (use-package rust-mode :ensure t)
 (use-package sphinx-mode :ensure t)
+(use-package ssh-config-mode :ensure t)
 (use-package toml-mode :ensure t)
 (use-package yaml-mode :ensure t)
 ;; Themes
