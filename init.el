@@ -49,10 +49,13 @@
 (use-package toml-mode :ensure t)
 (use-package yaml-mode :ensure t)
 ;; Themes
-(use-package github-modern-theme :ensure t)
-(use-package gruvbox-theme :ensure t)
-(use-package material-theme :ensure t)
-(use-package tangotango-theme :ensure t)
+(use-package github-modern-theme :ensure t :disabled)
+(use-package material-theme :ensure t :disabled)
+(use-package tangotango-theme :ensure t :disabled)
+(use-package gruvbox-theme
+  :ensure t
+  :config
+  (load-theme 'gruvbox t))
 
 ;; Don't use menubar/toolbar often
 (menu-bar-mode -1)
@@ -81,9 +84,9 @@
 (add-hook 'python-mode-hook '(lambda()
     (setq adaptive-fill-mode ())))
 
-;; Use a theme on graphical displays
-(when (display-graphic-p)
-  (load-theme 'gruvbox t))
+;; Use a theme only on graphical displays
+;; (when (display-graphic-p)
+;; (load-theme 'gruvbox t))
 
 ;; No new tabs; show existing ones
 ;; See also: https://www.emacswiki.org/emacs/NoTabs
