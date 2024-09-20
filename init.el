@@ -69,12 +69,7 @@
 (delete-selection-mode 1)
 
 ;; Enable line and column numbering
-(global-linum-mode 1)
-(line-number-mode 1)
-(column-number-mode 1)
-
-;; Enable line and column numbering
-(global-linum-mode 1)
+(global-display-line-numbers-mode 1)
 (line-number-mode 1)
 (column-number-mode 1)
 
