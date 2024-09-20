@@ -38,6 +38,7 @@
 ;; AI assistant
 (when (string> emacs-version "28.1")
   (use-package ellama
+    :ensure t
     :init
     ;; Set up key bindings -- does not work; conflict with Elpy?
     ;; (setopt ellama-keymap-prefix "C-c e")
