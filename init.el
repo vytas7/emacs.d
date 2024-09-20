@@ -35,6 +35,20 @@
   :ensure t
   :init
   (helm-mode 1))
+;; AI assistant
+(when (string> emacs-version "28.1")
+  (use-package ellama
+    :init
+    ;; Set up key bindings -- does not work; conflict with Elpy?
+    ;; (setopt ellama-keymap-prefix "C-c e")
+    (require 'llm-ollama)
+    (setopt ellama-provider
+	    (make-llm-ollama
+	     ;; AI assistant model to use;
+	     ;; value should be the same as in `ollama pull`.
+	     :chat-model "llama3.1"
+	     :embedding-model "nomic-embed-text")))
+  )
 ;; Development tools
 (use-package flycheck :ensure t)
 (use-package magit :ensure t)
