@@ -67,6 +67,7 @@
 (use-package sphinx-mode :ensure t)
 (use-package ssh-config-mode :ensure t)
 (use-package toml-mode :ensure t)
+(use-package typescript-mode :ensure t)
 (use-package yaml-mode :ensure t)
 ;; Themes
 (use-package github-modern-theme :ensure t :disabled)
