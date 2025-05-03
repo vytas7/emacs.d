@@ -5,6 +5,8 @@
 /autosave
 /backup
 /custom.el
+/eln-cache
+/tramp
 /elpa
 /elpa-*
 /elpy
