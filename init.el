@@ -35,7 +35,7 @@
   :ensure t
   :init
   (helm-mode 1))
-;; AI assistant
+;; AI assistants
 (when (string> emacs-version "28.1")
   (use-package ellama
     :ensure t
@@ -44,12 +44,20 @@
     ;; (setopt ellama-keymap-prefix "C-c e")
     (require 'llm-ollama)
     (setopt ellama-provider
-	    (make-llm-ollama
-	     ;; AI assistant model to use;
-	     ;; value should be the same as in `ollama pull`.
-	     :chat-model "llama3.1"
-	     :embedding-model "nomic-embed-text")))
+            (make-llm-ollama
+             ;; AI assistant model to use; value should be the same as in `ollama pull`.
+             ;; :chat-model "llama3.1"
+             ;; :chat-model "openthinker:7b"
+             ;; :chat-model "phi4"
+             :chat-model "qwen3:8b"
+             :embedding-model "nomic-embed-text")))
   )
+(use-package agent-shell
+  :ensure t
+  ;; :ensure-system-package
+  ;; Add agent installation configs here
+  )
+
 ;; Development tools
 (use-package flycheck :ensure t)
 (use-package magit :ensure t)
@@ -76,7 +84,7 @@
 (use-package gruvbox-theme
   :ensure t
   :config
-  (load-theme 'gruvbox t))
+  (load-theme 'gruvbox-dark-hard t))
 
 ;; Don't use menubar/toolbar often
 (menu-bar-mode -1)
