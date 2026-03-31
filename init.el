@@ -91,7 +91,8 @@
 (tool-bar-mode -1)
 
 ;; I prefer scrollbars on the right side
-(set-scroll-bar-mode 'right)
+(when (display-graphic-p)
+  (set-scroll-bar-mode 'right))
 
 ;; I want delete to work!
 (delete-selection-mode 1)
