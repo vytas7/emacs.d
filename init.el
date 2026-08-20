@@ -57,6 +57,8 @@
   ;; :ensure-system-package
   ;; Add agent installation configs here
   )
+(use-package pi-coding-agent
+  :ensure t)
 
 ;; Development tools
 (use-package flycheck :ensure t)
@@ -112,6 +114,9 @@
 ;; Use a theme only on graphical displays
 ;; (when (display-graphic-p)
 ;; (load-theme 'gruvbox t))
+
+;; Automatically revert buffers when modified by, e.g., an AI assistant.
+(global-auto-revert-mode 1)
 
 ;; No new tabs; show existing ones
 ;; See also: https://www.emacswiki.org/emacs/NoTabs
