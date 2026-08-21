@@ -3,6 +3,9 @@
 (setq use-dialog-box nil)
 (setq use-file-dialog nil)
 
+;; Log native-compilation warnings but don't pop up the *Warnings* buffer.
+(setq native-comp-async-report-warnings-errors 'silent)
+
 ;; Store customizations in custom.el
 (setq custom-file (locate-user-emacs-file "custom.el"))
 
